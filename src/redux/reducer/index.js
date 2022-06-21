@@ -1,8 +1,14 @@
 const INITIAL_STATE = {
-    name: '',
+    data: {},
 }
     
 function reducer(state = INITIAL_STATE, action) {
+    if( action.type === 'SEARCH_REDDIT'){
+        return ({
+            ...state,
+            ...action.payload,
+        });
+    }
     return state;
 }
     
